@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>AI Productivity Tracker</title>
+<link rel="stylesheet" href="track.css">
+</head>
+
+<body>
+
+<header>
+<h1>🚀 AI Weekly Productivity Tracker</h1>
+<button id="themeBtn">Toggle Theme</button>
+</header>
+
+<section class="dashboard">
+
+<div class="card">
+<h3>Weekly Completion</h3>
+<div class="progress">
+<div id="progressFill"></div>
+</div>
+<p id="weeklyScore">0%</p>
+</div>
+
+<div class="card">
+<h3>AI Productivity Insight</h3>
+<p id="aiInsight">Click AI Suggestion to analyze your productivity.</p>
+<button onclick="aiInsight()">AI Suggestion</button>
+</div>
+
+<div class="card">
+<h3>Task Streak</h3>
+<p id="streak">0 Day Streak</p>
+</div>
+
+</section>
+
+<section class="controls">
+
+<input id="taskInput" placeholder="Add new task">
+<button onclick="addTask()">Add Task</button>
+<button onclick="resetWeek()">Reset Week</button>
+
+</section>
+
+<section class="tracker">
+
+<table id="taskTable">
+
+<thead>
+<tr>
+<th>Day</th>
+</tr>
+</thead>
+
+<tbody id="tableBody"></tbody>
+
+<tfoot>
+<tr id="taskScoreRow">
+<th>Task %</th>
+</tr>
+</tfoot>
+
+</table>
+
+</section>
+
+<script src="track.js"></script>
+
+</body>
+</html>
